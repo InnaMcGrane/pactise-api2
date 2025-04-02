@@ -11,6 +11,10 @@ function App() {
   }, [])
   
   
-  return users && <UsersList users={users}/>
+  return <div className="container">
+    {
+      users && <UsersList users={users}/>
+    }
+  </div>
 }
 export default App
