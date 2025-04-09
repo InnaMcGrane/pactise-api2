@@ -1,6 +1,9 @@
 .selected-user {
-	display: flex;
-    border-radius: 20px;
- padding: 5px 20px;
- background-color: rgb(159, 224, 202);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 5px 20px;
+  background-color: rgb(159, 224, 202);
+  gap: 5px;
 }

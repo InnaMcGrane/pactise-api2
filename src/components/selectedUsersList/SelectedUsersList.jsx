@@ -9,7 +9,6 @@ function SelectedUsersList() {
         <SelectedUser name={'Johnson'}/>
         <SelectedUser name={'Michael Williams'}/>
         <SelectedUser name={'Emily Williams'}/>
-        <SelectedUser name={'Emily Johnson'}/>
     </div>
 }
 
