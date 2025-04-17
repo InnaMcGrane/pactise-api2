@@ -39,11 +39,13 @@ function App() {
       .then((data) => setUsers(data.users));
   }, [])
   
-  return <>
-  <div className="container"><SelectedUsersList selectedUsers={selectedUsers}/></div>
-  <div className="container">
-    {users && <UsersList users={users} multiUserHandler={multiUserHandler} />}
-  </div>
-  </>
+  return (
+    <>
+      <div className="container">
+        <SelectedUsersList selectedUsers={selectedUsers} multiUserHandler={multiUserHandler} />
+      </div>
+      <div className="container">{users && <UsersList users={users} multiUserHandler={multiUserHandler} selectedUsers={selectedUsers} />}</div>
+    </>
+  );
 }
 export default App
