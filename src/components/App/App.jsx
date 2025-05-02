@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import UsersList from "../UsersList/UsersList";
 import SelectedUsersList from "../selectedUsersList/SelectedUsersList";
+import Search from "../Search/Search";
 
 function App() {
   // 100 000
@@ -28,6 +29,9 @@ function App() {
   
   return (
     <>
+    <div className="container">
+      <Search/>
+    </div>
       <div className="container">
         <SelectedUsersList selectedUsers={selectedUsers} multiUserHandler={multiUserHandler} />
       </div>
