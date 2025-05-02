@@ -7,19 +7,6 @@ function App() {
   const [users, setUsers] = useState([]);
   // 2
   const [selectedUsers, setSelectedUsers] = useState([])
-
-  // [
-  //   {
-  //     id: 2353,
-  //     name: 'e65ur76r5',
-  //     selected: false
-  //   },
-  //   {
-  //     id: 54,
-  //     name: '6y654s54',
-  //     selected: false
-  //   }
-  // ]
   
   const multiUserHandler = (id) => {
     // поняять какую операцию надо делать (добавление в selectedUsers или удаление)
