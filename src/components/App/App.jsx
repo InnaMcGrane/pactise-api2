@@ -29,16 +29,31 @@ function App() {
       .then((res) => res.json())
       .then((data) => setUsers(data.users));
   }, [])
+
+  const getFilteredUsersByName = () => {
+    if (searchText.length === 0) {
+      return users
+    }
+
+    return users.filter((user) => {
+      const userFullName = `${user.firstName} ${user.lastName}`.toLowerCase()
+
+      if (userFullName.includes(searchText.toLowerCase())) {
+        return true
+      }
+      return false
+    })
+  }
   
   return (
     <>
       <div className="container">
-        <Search setSearchText={setSearchText} searchText={searchText}/>
+        <Search setSearchText={setSearchText} searchText={searchText} />
       </div>
       <div className="container">
         <SelectedUsersList selectedUsers={selectedUsers} multiUserHandler={multiUserHandler} />
       </div>
-      <div className="container">{users && <UsersList users={users} multiUserHandler={multiUserHandler} selectedUsers={selectedUsers} />}</div>
+      <div className="container">{users && <UsersList users={getFilteredUsersByName()} multiUserHandler={multiUserHandler} selectedUsers={selectedUsers} />}</div>
     </>
   );
 }
