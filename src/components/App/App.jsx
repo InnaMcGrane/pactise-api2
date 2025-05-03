@@ -8,6 +8,9 @@ function App() {
   const [users, setUsers] = useState([]);
   // 2
   const [selectedUsers, setSelectedUsers] = useState([])
+  const [searchText, setSearchText] = useState("")
+
+  console.log('searchText', searchText);
   
   const multiUserHandler = (id) => {
     // поняять какую операцию надо делать (добавление в selectedUsers или удаление)
@@ -29,9 +32,9 @@ function App() {
   
   return (
     <>
-    <div className="container">
-      <Search/>
-    </div>
+      <div className="container">
+        <Search setSearchText={setSearchText} searchText={searchText}/>
+      </div>
       <div className="container">
         <SelectedUsersList selectedUsers={selectedUsers} multiUserHandler={multiUserHandler} />
       </div>
