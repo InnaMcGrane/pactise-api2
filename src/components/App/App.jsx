@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import UsersList from "../UsersList/UsersList";
 import SelectedUsersList from "../selectedUsersList/SelectedUsersList";
 import Search from "../Search/Search";
+import Header from "../Header/Header";
 
 function App() {
   // 100 000
@@ -47,6 +48,7 @@ function App() {
   
   return (
     <>
+    <Header/>
       <div className="container">
         <Search setSearchText={setSearchText} searchText={searchText} />
       </div>
