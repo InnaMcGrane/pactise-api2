@@ -4,18 +4,25 @@ import Logo from "../Logo/Logo";
 import Menu from "../Menu/Menu";
 import ListGroup from "../ListGroup/ListGroup";
 import ListGroupItem from "../ListGroupItem/ListGroupItem";
+import Link from "../Link/Link";
 
 const Header = () => {
   return (
     <header className={cn(styles["header"])}>
       <Logo />
-      <Menu>
         <ListGroup>
-          <ListGroupItem>Home</ListGroupItem>
-          <ListGroupItem>Popular users</ListGroupItem>
-          <ListGroupItem>Contacts</ListGroupItem>
-        </ListGroup>
+      <Menu>
+          <ListGroupItem>
+            <Link url="/">Home</Link>
+          </ListGroupItem>
+          <ListGroupItem>
+            <Link url="popular">Popular </Link>
+          </ListGroupItem>
+          <ListGroupItem>
+            <Link url="contacts">Contacts</Link>
+          </ListGroupItem>
       </Menu>
+        </ListGroup>
     </header>
   );
 };
